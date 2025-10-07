@@ -25,12 +25,16 @@ public class Ejercicio26 {
        
        millar=numEntero/1000;
        System.out.println("La primera cifra es: "+millar);
+       //Calculo millar
        centena=(numEntero%1000)/100;
        System.out.println("La segunda cifra es: "+centena);
+       //Calculo centena
        decena=(numEntero%1000)%100/10;
        System.out.println("La tercera cifra es: "+decena);
+       //Calculo decena
        unidad=(numEntero%1000)%100%10;
        System.out.println("La cuarta cifra es: "+unidad);
+       //Calculo unidad
        
      
     }

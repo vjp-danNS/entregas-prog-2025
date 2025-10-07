@@ -29,10 +29,10 @@ public class Ejercicio26 {
        centena=(numEntero%1000)/100;
        System.out.println("La segunda cifra es: "+centena);
        //Calculo centena
-       decena=(numEntero%1000)%100/10;
+       decena=(numEntero%100)/10;
        System.out.println("La tercera cifra es: "+decena);
        //Calculo decena
-       unidad=(numEntero%1000)%100%10;
+       unidad=numEntero%10;
        System.out.println("La cuarta cifra es: "+unidad);
        //Calculo unidad
        

@@ -21,7 +21,7 @@ public class Ejercicio9 {
         int num1,num2,num3,num4;
         
         //Creo Variables para almacenar con auxiliares y ayudar operacion
-        int aux1,aux2;
+        int aux;
         
         System.out.print("Por favor, introduzca el primer numero: ");num1= entrada.nextInt();
         System.out.print("Ahora, introduzca un segundo numero: ");num2= entrada.nextInt();
@@ -30,33 +30,51 @@ public class Ejercicio9 {
         
         //Primera Iteracion
         if (num1>num2) {
-            aux1=num1;aux2=num2;num1=aux2;num2=aux1;
+            aux=num1;
+            num1=num2;
+            num2=aux;
         }
         if (num2>num3) {
-            aux1=num2;aux2=num3;num2=aux2;num3=aux1;
+            aux=num2;
+            num2=num3;
+            num3=aux;
         }
         if (num3>num4) {
-            aux1=num3;aux2=num4;num3=aux2;num4=aux1;
+            aux=num3;
+            num3=num4;
+            num4=aux;
         }
         //Segunda Iteracion
         if (num1>num2) {
-            aux1=num1;aux2=num2;num1=aux2;num2=aux1;
+            aux=num1;
+            num1=num2;
+            num2=aux;
         }
         if (num2>num3) {
-            aux1=num2;aux2=num3;num2=aux2;num3=aux1;
+            aux=num2;
+            num2=num3;
+            num3=aux;
         }
         if (num3>num4) {
-            aux1=num3;aux2=num4;num3=aux2;num4=aux1;
+            aux=num3;
+            num3=num4;
+            num4=aux;
         }
         //Tercera Iteracion
         if (num1>num2) {
-            aux1=num1;aux2=num2;num1=aux2;num2=aux1;
+            aux=num1;
+            num1=num2;
+            num2=aux;
         }
         if (num2>num3) {
-            aux1=num2;aux2=num3;num2=aux2;num3=aux1;
+            aux=num2;
+            num2=num3;
+            num3=aux;
         }
         if (num3>num4) {
-            aux1=num3;aux2=num4;num3=aux2;num4=aux1;
+            aux=num3;
+            num3=num4;
+            num4=aux;
         }        
         //print final
         System.out.println("El orden de los numeros introducidos es el "+num1+"-"+num2+"-"+num3+"-"+num4);

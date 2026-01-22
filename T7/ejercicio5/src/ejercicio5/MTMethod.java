@@ -62,6 +62,36 @@ public class MTMethod {
         }
         return suma;
     }
+    //Devuelve la media de los numeros dentro de la matriz
+    public static int getMedia(int [][] matriz){
+        int media=0,i=0,j=0;
+        for (i=0 ; i < matriz.length; i++) {
+            for ( j=0 ; j < matriz[i].length; j++) {
+                media+=matriz[i][j];
+                
+            }
+            
+        }
+        media/=(i*10+j);
+        return media;
+    }
+    //Devuelve la media de los numeros de una fila de la matriz
+    public static int getMediaFila(int [][] matriz, int fila){
+        int media=0,i=0,j=0;
+        for (i=0 ; i < matriz.length; i++) {
+            for ( j=0 ; j < matriz[i].length; j++) {
+                if (i==fila) {
+                    media+=matriz[i][j];
+                }
+                
+                
+            }
+            
+        }
+        media/=j;
+        
+        return media;
+    }
     //Devuelve el numero mayor que se encuentra en la matriz
     public static int getMayor(int [][] matriz) {
         int mayor=matriz[0][0];
@@ -74,6 +104,19 @@ public class MTMethod {
             
         }
         return mayor;
+    }
+    //Devuelve la posicion del numero mayor
+    public static float getMayorPos(int [][]matriz){
+        float mejor= 0.0f;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[i][j]>mejor) {
+                    mejor=i+j/10;
+                }
+            }
+            
+        }
+        return mejor;
     }
     //Devuelve el numero menor que se encuentra en la matriz
     public static int getMenor(int [][] matriz) {

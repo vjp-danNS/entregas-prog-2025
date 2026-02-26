@@ -42,8 +42,8 @@ public class Ejercicio16 {
             System.out.println("");
             switch (opcion) {
                 case 1:
-                    MTMethod.fillMatrizRandom(notas, 0, 10); //Para probar sin tener que rellenar todas las notas se puede rellenar con este metodo
-                    //MTMethod.fillMatrizAsk(notas);
+                    //MTMethod.fillMatrizRandom(notas, 0, 10); //Para probar sin tener que rellenar todas las notas se puede rellenar con este metodo
+                    MTMethod.fillMatrizAsk(notas);
                     break;
                 case 2:
                     

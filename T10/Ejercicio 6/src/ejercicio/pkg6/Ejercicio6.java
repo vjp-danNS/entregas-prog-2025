@@ -52,19 +52,19 @@ public class Ejercicio6 {
                     MTArrayList.mostrarVentasReves(listaCoches, listaMeses);
                     break;
                 case 4:
-                    
+                    MTArrayList.sumaTotal(listaCoches);
                     break;
                 case 5:
-                    
+                    MTArrayList.sumaTotalMesesConA(listaCoches, listaMeses);
                     break;
                 case 6:
-                    
+                    MTArrayList.mesMasVentas(listaCoches, listaMeses);
                     break;
                 case 7:
-                    
+                    System.out.println("Saliendo...");
                     break;
                 default:
-                    throw new AssertionError();
+                    System.out.println("Opcion no valida, seleccione una dentro del menu");
             }
         } while (opcion!=7);
     }

@@ -96,7 +96,7 @@ public class MTArrayList {
     }
     public static void mostrarVentasReves (ArrayList<Integer> lista, ArrayList<String> listaMeses){
         System.out.println("Lista de ventas al reves: ");
-        for (int i = 11; i > 0; i--) {
+        for (int i = lista.size()-1; i >= 0; i--) {
             System.out.println(listaMeses.get(i)+": "+lista.get(i));
         }
     
@@ -121,16 +121,26 @@ public class MTArrayList {
         int suma=0;
         
         for (int i = 0; i < lista.size(); i++) {
-            boolean tieneA=false;
-            for (int j = 0; j < (listaMeses.get(i)).length; j++) {
-                
-                
-            }
-            if (tieneA) {
+            if (listaMeses.get(i).contains("a")) {
                 suma+=lista.get(i);
             }
         }
         System.out.println("La suma total de la lista es: "+suma);
     }
     
+    //Muestra el mes con mas ventas
+    public static void mesMasVentas(ArrayList<Integer> lista, ArrayList<String> listaMeses){
+        int mejorVenta=lista.get(0);
+        String mesMasVentas=listaMeses.get(0);
+        
+        for (int i = 0; i < listaMeses.size(); i++) {
+            
+            if (mejorVenta<lista.get(i)) {
+                mejorVenta=lista.get(i);
+                mesMasVentas=listaMeses.get(i);
+            }
+            
+        }
+        System.out.println("El mes con mas ventas fue "+mesMasVentas+" con "+mejorVenta+" ventas");
+    }
 }

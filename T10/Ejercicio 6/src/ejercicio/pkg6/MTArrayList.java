@@ -121,7 +121,7 @@ public class MTArrayList {
         int suma=0;
         
         for (int i = 0; i < lista.size(); i++) {
-            if (listaMeses.get(i).contains("a")) {
+            if (listaMeses.get(i).contains("a")||listaMeses.get(i).contains("A")) {
                 suma+=lista.get(i);
             }
         }

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ejercicio.pkg14;
+package ejercicio.pkg5;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -68,7 +68,7 @@ public class MTArrayList {
         boolean salir=false;
         do {            
            System.out.print("Ingresa un valor para ingresar a la lista "
-                   + "si es negativo el ingreso terminara: ");
+                   + "si es negativo, el ingreso terminara: ");
            num=esc.nextInt();
            
             if (num<0) {
@@ -285,5 +285,53 @@ public class MTArrayList {
                 
             }
         }
+    }
+    
+    //Devuelve el numero par mayor de la lista. INTEGER
+    public static int parMayor(ArrayList<Integer> lista){
+        //No lo inicio en la posicion 0 porque no se si es par
+        int num=0;
+        
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i)%2==0 && num < lista.get(i)) {
+                num=lista.get(i);
+            }
+            
+        }
+        
+        
+        return num;
+    }
+    
+    //Devuelve el numero impar menor de la lista. INTEGER
+    public static int imparMenor(ArrayList<Integer> lista){
+        //No lo inicio en la posicion 0 porque no se si es impar
+        int num=0;
+        
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i)%2!=0 && num > lista.get(i)) {
+                num=lista.get(i);
+            }
+            
+        }
+        
+        return num;
+    }
+    
+    
+    public static void switchPositionInt(ArrayList<Integer> lista, int a, int b ){
+        
+        //Index de posicion de a y b
+        int idxA=0, idxB=0;
+        
+        int i=0;
+        
+        boolean encontrado=false;
+        
+        while(!encontrado && i<lista.size()){
+            
+        }
+        
+    
     }
 }

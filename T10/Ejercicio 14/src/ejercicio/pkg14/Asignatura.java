@@ -48,8 +48,5 @@ public class Asignatura {
         return "Asignatura{" + "nombre=" + nombre + ", nota=" + nota + '}';
     }
     
-    //Otros
-    //Crea un array de asignaturas con Lengua, Mates y Historia
-    public static void tresAsignaturas(Asignatura[] arrayAsignaturas){
-    }
+    
 }

@@ -23,6 +23,7 @@ public class Ejercicio14 {
         int opcion;
         //Lista
         ArrayList<Alumno> lista =new ArrayList<>();
+        //Comienzo menu
         do {
             System.out.print("\n-----MENU ALUMNOS----"
                     + "\n1.- Introducir 1 alumno nuevo con sus notas"
@@ -35,16 +36,22 @@ public class Ejercicio14 {
             
             switch (opcion) {
                 case 1 -> {
+                    Alumno.nuevoAlumno(lista);
                 }
+                
                 case 2 -> {
+                    Alumno.mostrarTodosLosAlumnos(lista);
                 }
                 case 3 -> {
+                    Alumno.mejorAlumno(lista);
                 }
                 case 4 -> {
+                    Alumno.masDificil(lista);
                 }
                 case 5 -> {
+                    System.out.println("Saliendo");
                 }
-                default -> throw new AssertionError();
+                
             }
         } while (opcion!=5);
     }

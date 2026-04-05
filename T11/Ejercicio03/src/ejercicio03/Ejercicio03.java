@@ -28,9 +28,16 @@ public class Ejercicio03 {
         
         //Menu
         do {           
-            System.out.println("");
+            System.out.print("\n-------MENU AUTOBUSES PLASENCIA-------"
+                    + "\n1.- Aparcar"
+                    + "\n2.- Mostrar darsenas libres"
+                    + "\n3.- Buscar autobus por matricula"
+                    + "\n4.- Buscar conductor por nombre"
+                    + "\n5.- Posicion del autobus con mas conductores asignados"
+                    + "\n6.- Salir "
+                    + "\nOpcion: ");
             
-            
+            //Lector de opciones
             opcion=escInt.nextInt();
             
             switch (opcion) {
@@ -38,16 +45,16 @@ public class Ejercicio03 {
                     Autobus.aparcar(aparcamiento);
                     break;
                 case 2:
-                    
+                    Autobus.aparcamientosVacios(aparcamiento);
                     break;
                 case 3:
-                    
+                    Autobus.buscarAutobus(aparcamiento);
                     break;
                 case 4:
-                    
+                    Autobus.buscarConductor(aparcamiento);
                     break;
                 case 5:
-                    
+                    Autobus.mayorNDeConductores(aparcamiento);
                     break;
                 case 6:
                     System.out.println("Saliendo...");

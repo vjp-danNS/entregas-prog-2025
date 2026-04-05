@@ -27,7 +27,7 @@ public class Ejercicio5 {
         //Muestro la lista
         System.out.println("Muestro la lista por primera vez");
         MTArrayList.mostrarListaInt(lista);
-        //Calculo par mayor y impar menor
+        //Calculo par mayor y impar menor 
         parMayor=MTArrayList.parMayor(lista);
         imparMenor=MTArrayList.imparMenor(lista);
         //Compruebo la existencia de par e impares y muestro una lista si existen, en caso de su inexistencia muestro un mensaje de error. Comprueba existencia con Integer.MAX_VALUE

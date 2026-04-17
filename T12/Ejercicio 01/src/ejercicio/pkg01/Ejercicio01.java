@@ -18,6 +18,7 @@ public class Ejercicio01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //CODIGO NO PROBADO-----------------------------------ªªªªª!!
         //Variables
         int opcion;
         ArrayList<Contacto> agenda =new ArrayList<>();
@@ -34,30 +35,36 @@ public class Ejercicio01 {
                     + "\nOpcion: ");
             
                 opcion=escanerInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Caracter no valido");
-                e.getMessage();
-                opcion=6;
-            }
+            
             
             switch (opcion) {
                 case 1:
                     Contacto.addContacto(agenda);
                     break;
                 case 2:
-                    
+                    Contacto.showAgenda(agenda);
                     break;
                 case 3:
-                    
+                    Contacto.removeContacto(agenda);
                     break;
                 case 4:
-                    
+                    Contacto.showSortedContacto(agenda);
                     break;
                 case 5:
                     System.out.println("\n\nSaliendo...");
                     break;
                 default:
                     System.out.println("\nOpcion no valida\n");
+            }
+            } catch (InputMismatchException e) {
+                System.out.println("Caracter no valido");
+                e.getMessage();
+                opcion=6;
+            }catch (NullPointerException e){
+                System.out.println("Se intento buscar un objeto en una lista y no se encontro");
+                e.getMessage();
+                opcion=6;
+            
             }
             
             
@@ -73,4 +80,5 @@ public class Ejercicio01 {
         
         return n;
     }
+    
 }

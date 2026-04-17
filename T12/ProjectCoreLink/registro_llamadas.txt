@@ -1,0 +1,57 @@
+ARCHIVO DE INTERCEPCIONES: SERVIDOR CENTRAL M-04
+
+TRANSCRIPCIÓN #00
+FECHA: 26/03/2026 | HORA: 18:30
+
+673245732: ¿Está todo preparado para la entrega de mañana?
+
+603553660: El transporte está en camino. Pero antes necesito confirmar que el terreno es seguro para la descarga.
+
+673245732: Descuida. Nadie mirará las cámaras. A partir de las 04:00 la planta es vuestra.
+
+TRANSCRIPCIÓN #01
+FECHA: 26/03/2026 | HORA: 22:15
+
+673245732: ¿Está todo listo?
+
+647234451: No lo sé. Las agujas de los tanques están vibrando demasiado. Nunca había visto esa oscilación en el sector primario.
+
+673245732: Es normal por el aumento de carga de esta noche. No informes de ello. Si el supervisor pregunta, dile que acabas de calibrar los niveles y que están estables.
+
+TRANSCRIPCIÓN #02
+FECHA: 26/03/2026 | HORA: 15:45
+
+673245732: ¿Has terminado con la inspección del bloque B?
+
+602661710: Sí, todo en orden, aunque el aire acondicionado hace un ruido extraño. He pedido a Patricia que le eche un ojo mañana.
+
+673245732: Perfecto, anótalo en el parte diario y vete a casa. No hace falta que te quedes al turno doble.
+
+TRANSCRIPCIÓN #03
+FECHA: 26/03/2026 | HORA: 16:20
+
+603553660: Hola, Marcos. Te llamo por lo de la cena del viernes. ¿Llevo yo el vino o te encargas tú?
+
+673245732: Tráelo tú, pero que sea algo bueno. Por cierto, ¿cómo va el jardín? Me dijiste que ibas a plantar flores nuevas.
+
+603553660: Pues va lento, pero ya ha brotado el girasol. Ha empezado la temporada.
+
+673245732: Entonces tengo que poner en marcha el riego. Pásame los códigos esta noche.
+
+603553660: Hecho. Te los mando esta noche.
+
+TRANSCRIPCIÓN #04
+FECHA: 26/03/2026 | HORA: 17:10
+
+601373	432: Marcos, ¿tienes los informes de rendimiento del trimestre pasado? Los necesito para la reunión de Madrid de mañana.
+
+673245732: Los tiene Diego en su terminal. Yo estoy ocupado con el reajuste de presión del núcleo. No me molestes ahora, tío.
+
+601373432: Vaya humos... vale, se los pediré a él.
+
+TRANSCRIPCIÓN #06
+FECHA: 26/03/2026 | HORA: 22:05
+
+603553660: Ya te he enviado los códigos. 
+
+673245732: Vale. A partir de ahora, no vuelvas a llamar a este número. Nos vemos en el punto de encuentro cuando la zona esté evacuada.

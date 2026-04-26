@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------
+Nombre completo: Dan Neculman
+Sexo: H
+Edad: 23
+Numero de suspensos del curso anterior: 0
+Residencia familiar: Si
+Ingresos anuales de la familia: 17600.0
+----------------------------------------------------------------------------
+Nombre completo: Pepe Perez
+Sexo: H
+Edad: 30
+Numero de suspensos del curso anterior: 1
+Residencia familiar: No
+Ingresos anuales de la familia: 12000.0
+----------------------------------------------------------------------------
+Nombre completo: Marta Diaz
+Sexo: M
+Edad: 20
+Numero de suspensos del curso anterior: 2
+Residencia familiar: si
+Ingresos anuales de la familia: 13000.0

@@ -23,7 +23,11 @@ public class Ejercicio06 {
     public static void main(String[] args) {
 
         int opcion;
+        FileWriter fw = null;
+        PrintWriter pw = null;
 
+        FileReader fr = null;
+        BufferedReader br = null;
         try {
             do {
                 System.out.print("\n-----MENU NUMEROS PARES------"
@@ -35,10 +39,10 @@ public class Ejercicio06 {
 
                 switch (opcion) {
                     case 1:
-                        writeFile();
+                        writeFile(fw, pw);
                         break;
                     case 2:
-                        readFile();
+                        readFile(fr, br);
                         break;
                     case 3:
                         System.out.println("Saliendo...");
@@ -48,75 +52,17 @@ public class Ejercicio06 {
                 }
 
             } while (opcion != 3);
+            
+        //Capturo errores y cierro metodos de escritura y lectura
         } catch (IOException e) {
             System.out.println("Error de entrada/salida");
             System.out.println(e.getMessage());
-        }
-    }
+        } catch (InputMismatchException e) {
+            System.out.println("Caracter no valido");
+            System.out.println(e.getMessage());
 
-    //Write File
-    public static void writeFile() throws InputMismatchException, IOException {
-
-        int[] vector = new int[100];
-        int n = 2, i = 0;
-        ;
-
-        System.out.println("\nEscribiendo fichero...\n");
-        System.out.println("\nEscribe el nombre del fichero donde quieres volcar los 100 primeros numeros pares: ");
-        NAME_FICHERO = escanerString();
-
-        FileWriter fw = new FileWriter(NAME_FICHERO);
-        PrintWriter pw = new PrintWriter(fw);
-
-        while (i < 100) {
-            if (n % 2 == 0) {
-                vector[i] = n;
-                i++;
-            }
-            n++;
-        }
-
-        for (int j = 0; j < vector.length; j++) {
-            int k = vector[j];
-            pw.println(k);
-        }
-
-        System.out.println("Fichero escrito de forma correcta");
-
-        if (pw != null) {
-            pw.close();
-        }
-
-        if (fw != null) {
-            try {
-                fw.close();
-            } catch (IOException e) {
-                System.out.println("Error de entrada/salida");
-                System.out.println(e.getMessage());
-            }
-        }
-        
-        
-
-    }
-
-    //Read File
-    public static void readFile() throws IOException {
-        if (NAME_FICHERO == null) {
-            System.out.println("No se ha escrito el fichero");
-        } else {
-            FileReader fr = new FileReader(NAME_FICHERO);
-            BufferedReader br = new BufferedReader(fr);
-            
-            String linea = br.readLine();
-            while (linea!=null) {                
-                System.out.println(linea);
-                linea=br.readLine();
-            }
-            
-            
-            
-            
+        } finally {
+            //Cierro metodos de lectura
             if (br != null) {
                 try {
                     br.close();
@@ -133,7 +79,77 @@ public class Ejercicio06 {
                     System.out.println(e.getMessage());
                 }
             }
-            
+
+            //Cierro metodos de escritura
+            if (pw != null) {
+                pw.close();
+            }
+
+            if (fw != null) {
+                try {
+                    fw.close();
+                } catch (IOException e) {
+                    System.out.println("Error de entrada/salida");
+                    System.out.println(e.getMessage());
+                }
+            }
+
+        }
+    }
+
+    //Write File, escribo un archivo de con el nombre que se le otorgue llenandolo de los 100 primeros numeros pares
+    public static void writeFile(FileWriter fw, PrintWriter pw) throws InputMismatchException, IOException {
+
+        int[] vector = new int[100];
+        int n = 2, i = 0;
+
+        //Pido nombre del fichero
+        System.out.println("\nEscribe el nombre del fichero donde quieres volcar los 100 primeros numeros pares: ");
+        NAME_FICHERO = escanerString();
+
+        //Abro metodo de escritura
+        fw = new FileWriter(NAME_FICHERO, true);
+        pw = new PrintWriter(fw);
+
+        System.out.println("\nEscribiendo fichero...\n");
+
+        //Escribo numeros partiendo desde el dos en un array, comprobando que sean pares y voy aumentando el numero a comprobar en 1 por bucle
+        while (i < 100) {
+            if (n % 2 == 0) {
+                vector[i] = n;
+                i++;
+            }
+            n++;
+        }
+
+        //Vuelco el array en el archivo de texto con nombre entregado por el usuario
+        for (int j = 0; j < vector.length; j++) {
+            int k = vector[j];
+            pw.println(k);
+        }
+
+        System.out.println("Fichero escrito de forma correcta");
+
+    }
+
+    //Read File, metodo que lee un archivo
+    public static void readFile(FileReader fr, BufferedReader br) throws IOException {
+        //Compruebo que se le haya dado un nombre al archivo
+        if (NAME_FICHERO == null) {
+            System.out.println("No se ha escrito el nombre del fichero");
+            //Si tiene nombre
+        } else {
+            //Abro metodo de lectura
+            fr = new FileReader(NAME_FICHERO);
+            br = new BufferedReader(fr);
+
+            //Leo la primera linea y si no es null la muestro por terminal
+            String linea = br.readLine();
+            while (linea != null) {
+                System.out.println(linea);
+                linea = br.readLine();
+            }
+
         }
 
     }

@@ -28,25 +28,103 @@ public class Ejercicio13 {
         int edad, suspensos;
         float  ingresosAnualesFamilia;
         
+        boolean check=false;
         
         try {
             
             
             
             
-            FileWriter fw = new FileWriter(NAME_FICHERO);
+            FileWriter fw = new FileWriter(NAME_FICHERO, true);
             PrintWriter pw = new PrintWriter(fw);
             
+            
+            //----------------PEDIR DATOS---------------
             System.out.println("\nRellenemos los datos de este becario: \n");
-            System.out.print("\nNombre: ");
+            
+            //Pido nombre
+            System.out.print("\nNombre completo: ");
             nombreYApellido=escanerString();
-            System.out.print("\nSexo: ");
-            sexo=escanerString();
-            System.out.print("\nEdad: ");
-            edad=escanerInt();
+            
+            //Pido sexo, compruebo que la respuesta sea H o M
+            do {                
+                System.out.print("\nSexo (H/M): ");
+                sexo=escanerString();
+                
+                if (sexo.equalsIgnoreCase("h")||sexo.equalsIgnoreCase("M")) {
+                    check=true;
+                }else{
+                    System.err.println("\nSexo no valido, elija entre H o M");
+                }
+                
+            } while (!check);
+            check=false;
+            
+            //Pido edad, compruebo que este dentro del rango especificado
+            
+            do {                
+                System.out.print("\nEdad: ");
+                edad=escanerInt();
+                
+                if (edad <= 60 && edad>=20) {
+                    check=true;
+                }else{
+                    System.err.println("\nEdad fuera del rango valido");
+                }
+                
+            } while (!check);
+            check=false;
             
             
-
+            //Pido numero de suspensos del curso anterior, compruebo que este dentro del rango
+            do {                
+                System.out.print("\nNumero de suspensos del curso anterior (0-4): ");
+                suspensos=escanerInt();
+                
+                if (suspensos <= 4 && suspensos>=0) {
+                    check=true;
+                }else{
+                    System.err.println("\nNumero de suspensos fuera del rango valido");
+                }
+                
+            } while (!check);
+            check=false;
+            
+            //Pido resisdencia familiar, compruebo si la respeusta es si o no
+            do {                
+                System.out.print("\nResidencia familiar (Si / No): ");
+                residenciaFamiliar=escanerString();
+                
+                if (residenciaFamiliar.equalsIgnoreCase("si")||residenciaFamiliar.equalsIgnoreCase("no")) {
+                    check=true;
+                }else{
+                    System.err.print("\nRespuesta diferente de la esperada, elija entre Si o No");
+                }
+            } while (!check);
+            check=false;
+            
+            //Pido ingresos anuales
+            System.out.print("\nIngresos anuales de la familia: ");
+            ingresosAnualesFamilia=escanerInt();
+            
+            //------------Escritura de datos en fichero-------------------
+            pw.println("----------------------------------------------------------------------------");
+            pw.println("Nombre completo: "+nombreYApellido);
+            pw.println("Sexo: "+sexo);
+            pw.println("Edad: "+edad);
+            pw.println("Numero de suspensos del curso anterior: "+suspensos);
+            pw.println("Residencia familiar: "+residenciaFamiliar);
+            pw.println("Ingresos anuales de la familia: "+ingresosAnualesFamilia);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            //Cierro metodos de manipulacion de archivos
             if (pw != null) {
                 pw.close();
             }
@@ -61,6 +139,8 @@ public class Ejercicio13 {
             }
 
         } catch (IOException e) {
+            System.out.println("Error de entrada/salida");
+            System.out.println(e.getMessage());
         }
 
     }
